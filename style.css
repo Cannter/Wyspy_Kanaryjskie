@@ -49,7 +49,7 @@ button{
     width: 550px;
     color: #fff;
     position: absolute;
-    right: -60;
+    right: -15%;
     top: 50%;
     transform: translateY(-50%);    
 }
