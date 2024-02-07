@@ -47,6 +47,7 @@
             gap: 20px;           
         }
         .grid-item {
+            text-decoration: none;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -89,23 +90,79 @@
             cursor: pointer;     
             align-items: center;     
         }
-        nav {
-            text-align: center;
-            backdrop-filter: blur(5px);;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2rem;
-        }
+        .container {
+    display: flex;
+    font-size: 14px;
+    height: 25vh;
+}
+
+.navbar {
+    margin: auto;
+    padding: 0.5rem 1.5rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link, .drop-down li {
+    list-style: none;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.drop-down {
+    position: absolute;
+    padding: 0.5rem 0;
+    margin: 0.5rem -0.5rem;
+    background: antiquewhite;
+    color: black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    font-size: 12px;
+    display: none;
+}
+
+.nav-link:hover {
+    background-color: black;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.services:hover .drop-down {
+    display: block;
+}
+
+.services a {
+    display: flex;
+    align-items: center;
+}
+
+
+.drop-down li:hover {
+    background: black;
+    color: white;
+    border-radius: 0.5rem;
+}
         .navbar .logo{
             width: 150px;
             margin: 30px 0;
             cursor: pointer;    
         }
         .navbar{
+            
             width: 90%;
             margin: auto;
             display: flex;
@@ -122,21 +179,36 @@
                 <img src="logo_can.svg" class="logo" alt="logo">                
                 </a>   
                 <h1>Wyspy Kanaryjskie</h1>
-                
             </div>
         </div>
-        
     </header>
-    <nav>
-        <a href="index.html">Strona główna</a>
-        <a href="menu.html">Menu</a>
-        <a href="fuerteventura.html">Fuerteventura</a>
-        <a href="tenerife.html">Tenerife</a>
-        <a href="grancanaria.html">Gran Canaria</a>
-        <a href="lanzarote.html">Lanzarote</a>
-        <a href="lapalma.html">La Palma</a>
-        <a href="lagomera.html">La Gomera</a>
-    </nav>
+    <div class="container">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <a href="index.html">Strona główna</a>
+                </li>
+                <li class="nav-link services">
+                    <a href="#">Wyspy                      
+                    </a>
+                    <ul class="drop-down">
+                        <li><a href="fuerteventura.html">Fuerteventura</a></li>
+                        <li><a href="tenerife.html">Tenerife</a></li>
+                        <li><a href="grancanaria.html">Gran Canaria</a></li>
+                        <li><a href="lanzarote.html">Lanzarote</a></li>
+                        <li><a href="lapalma.html">La Palma</a></li>
+                        <li><a href="lagomera.html">La Gomera</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link">
+                    <a href="#">O archipelagu</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">O nas</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <main>
         <div class="grid-container">
             <div class="grid-item">
