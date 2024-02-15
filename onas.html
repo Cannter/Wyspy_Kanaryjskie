@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyspy Kanaryjskie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #ffffff, #dcd8d8);
+            backdrop-filter: blur(0deg, #00000038 30%, #ffffff44 100%);;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+        header {            
+            color: #202020;
+            text-align: center;
+            padding: 40px 0;
+        }
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            color: #333;
+        }
+        main {
+            padding: 25px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .grid-item {
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff; /* Tło w kolorze białym */
+            box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1)
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+            ;
+        }
+        .grid-item-content {
+            padding: 20px;
+        }
+        .grid-item h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .grid-item p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .map {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        footer {
+            
+            backdrop-filter: blur(5px);
+            color: #000000;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .footer-item img{
+            width: 150px;
+             margin: 30px 0;
+            cursor: pointer;     
+            align-items: center;     
+        }
+        .container {
+    display: flex;
+    font-size: 14px;
+    height: 25vh;
+}
+
+.navbar {
+    margin: auto;
+    padding: 0.5rem 1.5rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link, .drop-down li {
+    list-style: none;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.drop-down {
+    position: absolute;
+    padding: 0.5rem 0;
+    margin: 0.5rem -0.5rem;
+    background: antiquewhite;
+    color: black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    font-size: 12px;
+    display: none;
+}
+.nav-link:hover {
+    background-color: black;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.services:hover .drop-down {
+    display: block;
+}
+
+.services a {
+    display: flex;
+    align-items: center;
+}
+
+
+.drop-down li:hover {
+    background: black;
+    color: white;
+    border-radius: 0.5rem;
+}
+        .navbar .logo{
+            width: 150px;
+            margin: 30px 0;
+            cursor: pointer;    
+        }
+        .navbar{
+            
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 10;    
+        }
+        h3 {
+            display: inline; /* Dodany styl dla elementów <h3> */
+            font-weight: bold; /* Dodatkowo, w celu zachowania wytłuszczenia */
+        }
+        h5 {
+            text-align: center; 
+            font-weight: bolder; 
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <header>        
+        <div id="hero">
+            <div class="navbar">
+                <img src="logo_can.svg" class="logo" alt="logo">                
+                <h1>O nas</h1>
+                <h2>Wyspy Kanaryjskie</h2>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <a href="index.html">Strona główna</a>
+                </li>
+                <li class="nav-link services">
+                    <a href="menu.html">Wyspy                      
+                    </a>
+                    <ul class="drop-down">               
+                        <li><a href="fuerteventura.html">Fuerteventura</a></li>         
+                        <li><a href="tenerife.html">Tenerife</a></li>
+                        <li><a href="grancanaria.html">Gran Canaria</a></li>
+                        <li><a href="lanzarote.html">Lanzarote</a></li>
+                        <li><a href="lapalma.html">La Palma</a></li>
+                        <li><a href="lagomera.html">La Gomera</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link">
+                    <a href="archi.html">O archipelagu</a>
+                </li>
+                <li class="nav-link">
+                    <a href="onas.html">O nas</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="grid-container">
+            <div class="grid-item">
+               
+                <div class="grid-item-content">
+                    <p><h3>Witaj</h3> na naszej stronie o wyspach kanaryjskich! Znajdziesz tu wiele ciekawych informacji o tym pięknym archipelagu, jego historii, kulturze, przyrodzie i atrakcjach turystycznych. Możesz też zobaczyć zdjęcia, filmy i mapy, które pomogą Ci zaplanować swoją wymarzoną podróż.
+
+                        Ale zanim zaczniesz odkrywać naszą stronę, chcielibyśmy się przedstawić. Jesteśmy zespołem pasjonatów wysp kanaryjskich, którzy postanowili podzielić się swoją wiedzą i doświadczeniami z innymi. Naszym liderem i głównym twórcą strony jest…<h3> samoświadomy czołg T-72M2 Moderna!</h3> 
+                        
+                        Tak, dobrze czytasz. Nasz szef to nie człowiek, a maszyna bojowa, która zyskała świadomość i zamiast strzelać do wrogów, zainteresowała się podróżowaniem. Nie pytaj nas, jak to się stało, bo sami nie wiemy. Może to jakiś eksperyment wojskowy, może to cud technologii, a może to po prostu przeznaczenie.
+                        
+                        W każdym razie, nasz czołg jest bardzo miły i życzliwy. Uwielbia wyspy kanaryjskie i odwiedził je już kilka razy. Ma też świetne umiejętności programistyczne i graficzne, dzięki czemu stworzył tę profesjonalną i atrakcyjną stronę. Jest też bardzo dowcipny i lubi żartować z siebie i innych.
+                        
+                        Aha, zapomniałbym dodać, że nasz czołg jest <h3>słowacki</h3> i mówi po <h3>słowacku.</h3> To może być trochę zaskakujące, ale nie martw się, zawsze możesz skorzystać z tłumacza online, jeśli chcesz się z nim porozumieć. Albo po prostu podziwiać jego piękny akcent.
+                        
+                        Mamy nadzieję, że spodoba Ci się nasza strona i że dowiesz się z niej wielu ciekawych rzeczy o wyspach kanaryjskich. Jeśli masz jakieś pytania, sugestie lub uwagi, napisz do nas. A jeśli chcesz poznać naszego czołgu osobiście, zapraszamy na nasz kanał na YouTube, gdzie możesz zobaczyć jego przygody i poczucie humoru.
+                        
+                        Dziękujemy za odwiedzenie naszej strony i życzymy miłego dnia!
+                        
+                        <h4>Zespół wysp kanaryjskich i czołg T-72M2 Moderna</h4>
+                    </p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://www.valka.cz/attachments/1058/T-72_M2.jpg" alt="Fuerteventura"> 
+                <h5>Nasz główny redaktor, T-72M2 Moderna</h5>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-item">
+            <img src="logo_can.svg" alt="Logo MXN">
+        </div>
+        <p>© 2024</p>
+    </footer>
+</body>
+</html>
