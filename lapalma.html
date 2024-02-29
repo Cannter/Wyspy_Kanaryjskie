@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Palma - Wyspy Kanaryjskie</title>
+    <title>Fuerteventura - Wyspy Kanaryjskie</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(to bottom, #ffffff, #d0d0d0);
-            color: #333;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #ffffff, #dcd8d8);
+            backdrop-filter: blur(0deg, #00000038 30%, #ffffff44 100%);;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            background-repeat: no-repeat;
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #333;
-            color: #fff;
+        header {            
+            color: #202020;
             text-align: center;
             padding: 40px 0;
         }
         h1, h2 {
-            font-family: 'Quicksand', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
         h1 {
             font-size: 2.5rem;
@@ -30,10 +35,10 @@
         h2 {
             font-size: 1.5rem;
             margin-top: 0;
-            color: #bbb;
+            color: #333;
         }
         main {
-            padding: 20px;
+            padding: 25px;
         }
         .grid-container {
             display: grid;
@@ -54,7 +59,7 @@
             ;
         }
         .grid-item-content {
-            padding: 20px;            
+            padding: 20px;
         }
         .grid-item h2 {
             margin-bottom: 10px;
@@ -71,43 +76,140 @@
             border: none;
         }
         footer {
-            background-color: #333;
-            color: #fff;
+            
+            backdrop-filter: blur(5px);
+            color: #000000;
             text-align: center;
             padding: 20px 0;
         }
-        nav {
-            text-align: center;
-            background-color: #333;
-            padding: 10px 0;
+        .footer-item img{
+            width: 150px;
+             margin: 30px 0;
+            cursor: pointer;     
+            align-items: center;     
         }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2rem;
+        .container {
+    display: flex;
+    font-size: 14px;
+    height: 25vh;
+}
+
+.navbar {
+    margin: auto;
+    padding: 0.5rem 1.5rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link, .drop-down li {
+    list-style: none;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.drop-down {
+    position: absolute;
+    padding: 0.5rem 0;
+    margin: 0.5rem -0.5rem;
+    background: antiquewhite;
+    color: black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    font-size: 12px;
+    display: none;
+}
+.nav-link:hover {
+    background-color: black;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.services:hover .drop-down {
+    display: block;
+}
+
+.services a {
+    display: flex;
+    align-items: center;
+}
+
+
+.drop-down li:hover {
+    background: black;
+    color: white;
+    border-radius: 0.5rem;
+}
+        .navbar .logo{
+            width: 150px;
+            margin: 30px 0;
+            cursor: pointer;    
+        }
+        .navbar{
+            
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 10;    
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Wyspy Kanaryjskie</h1>
-        <h2>La Palma</h2>
+    <header>        
+        <div id="hero">
+            <div class="navbar">
+                <img src="logo_can.svg" class="logo" alt="logo">                
+                </a>   
+                <h1>La Palma</h1>
+                <h2>Wyspy Kanaryjskie</h2>
+            </div>
+        </div>
     </header>
- <nav>
-        <a href="index.html">Strona główna</a>
-        <a href="menu.html">Menu</a>
-        <a href="fuerteventura.html">Fuerteventura</a>
-        <a href="tenerife.html">Tenerife</a>
-        <a href="grancanaria.html">Gran Canaria</a>
-        <a href="lanzarote.html">Lanzarote</a>
-        <a href="lapalma.html">La Palma</a>
-        <a href="lagomera.html">La Gomera</a>
-    </nav>
+    <div class="container">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <a href="index.html">Strona główna</a>
+                </li>
+                <li class="nav-link services">
+                    <a href="menu.html">Wyspy                      
+                    </a>
+                    <ul class="drop-down">                        
+                        <li><a href="fuerteventura.html">Fuerteventura</a></li>
+                        <li><a href="tenerife.html">Tenerife</a></li>
+                        <li><a href="grancanaria.html">Gran Canaria</a></li>
+                        <li><a href="lanzarote.html">Lanzarote</a></li>
+                        <li><a href="lagomera.html">La Gomera</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link">
+                    <a href="archi.html">O archipelagu</a>
+                </li>
+                <li class="nav-link">
+                    <a href="onas.html">O nas</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <main>
         <div class="grid-container">
             <div class="grid-item">
-                <img src="https://cdn.generationvoyage.fr/2019/03/visiter-la-palma-e1551784283201.jpg" alt="La Palma">
+                <img src="https://cdn.generationvoyage.fr/2019/03/visiter-la-palma-e1551784283201.jpg" alt="Fuerteventura">
                 <div class="grid-item-content">
                     <h2>La Palma</h2>
                     <p>La Palma, nazywana "Isla Bonita", zachwyca dziką przyrodą i spektakularnymi widokami, w tym z widokiem na Wielki Kanion Caldera de Taburiente.</p>
@@ -116,12 +218,14 @@
                 </div>
             </div>
             <div class="grid-item">
-                <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=-17.969665527343754,28.46200604354776,-17.693939208984375,28.759591366584697&amp;layer=mapnik"></iframe>
+                <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=-17.969665527343754,28.46200604354776,-17.693939208984375,28.759591366584697&amp;layer=mapnik"></iframe> 
             </div>
         </div>
     </main>
     <footer>
-        <p>Mniejsze Xięstwo Naddniestrzańskie</p>
+        <div class="footer-item">
+            <img src="logo_can.svg" alt="Logo MXN">
+        </div>
         <p>© 2024</p>
     </footer>
 </body>
